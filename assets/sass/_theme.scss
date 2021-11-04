@@ -1,0 +1,58 @@
+.theme--span {
+    font-family: $font-mont;
+    font-weight: bold;
+    font-size: 1.25rem;
+    line-height: 1.8125rem;
+
+    color: $cor-verde-2;
+}
+
+.theme--h2 {
+    font-family: $font-mont;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 3.0625rem;
+    color: $cor-preto-2;
+
+    &.white {
+        color: white !important;
+    }
+}
+
+.theme--btn {
+    background: $cor-verde-1;
+    border-radius: 82px;
+    padding: 1rem 1.75rem;
+    color: white;
+    font-weight: 700;
+    font-family: $font-red;
+    transition: .3s ease;
+    font-size: 1.25rem;
+
+    &:active {}
+}
+
+.theme--p {
+    font-family: $font-mont;
+    font-weight: normal;
+    font-size: 1.25rem;
+    line-height: 150%;
+    font-weight: 400;
+    color: $cor-preto-1;
+}
+
+.theme--h1 {
+    font-weight: bold;
+    font-size: 2.75rem;
+    line-height: 130%;
+    color: $cor-preto-2;
+    font-family: $font-red;
+}
+
+.icon--people {
+    @include size(45px);
+    overflow: hidden;
+    border-radius: 50%;
+    object-fit: cover;
+}

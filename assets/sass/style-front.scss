@@ -1,0 +1,38 @@
+@import '../sass/bootstrap__imports';
+@import '../sass/variaveis';
+@import '../sass/mixins'; //MIXINS
+
+// UTILIDADES
+@import '../sass/utilities/utilitarios';
+@import '../sass/utilities/responsivo';
+@import '../sass/utilities/reset';
+@import '../sass/utilities/animation';
+
+//components
+@import '../sass/components/body'; //BODY
+@import '../sass/components/menu'; //BODY
+
+.page--home {
+    @import '../sass/pages/home';
+}
+
+@media (min-width: 1200px) {
+
+    .container,
+    .container-sm,
+    .container-md,
+    .container-lg,
+    .container-xl {
+        max-width: 1220px;
+    }
+
+
+}
+
+.js-animate {
+    will-change: transform, opacity;
+}
+
+.js-animate.animou {
+    will-change: initial;
+}

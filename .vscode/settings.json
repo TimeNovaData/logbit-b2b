@@ -1,0 +1,36 @@
+{
+    "git.ignoreLimitWarning": true,
+
+    //força pasta para compilar
+    // "liveSassCompile.settings.forceBaseDirectory": [
+    //     "/home/static/assets/styles"
+    // ],
+
+    //SASS COMPILER SETTINGS ============================================
+    "liveSassCompile.settings.formats": [{
+            "format": "compressed", //compressed or expanded 
+            "extensionName": ".compilado.css",
+            "savePath": "assets/css" //diretorio para salvar o arquivo .css
+        },
+
+    ],
+/*     "liveSassCompile.settings.includeItems": [
+
+
+    ],
+ */
+    //config que gera .map 
+    "liveSassCompile.settings.generateMap": true,
+    // prefix
+    "liveSassCompile.settings.autoprefix": [
+        "> 2%",
+        // "last 2 versions"
+    ],
+    //nao mostra a barra || ctrl+shift+u
+    "liveSassCompile.settings.showOutputWindowOn": "Error",
+    "scss.showErrors": true,
+
+    // ===========================================================================
+
+
+}

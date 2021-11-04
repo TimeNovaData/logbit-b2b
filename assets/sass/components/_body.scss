@@ -1,0 +1,48 @@
+body {
+    @include scrollbars(8px, $cor-verde-2);
+    // font-feature-settings: 'pnum'on, 'lnum'on;
+    transition: opacity .4s ease;
+    // letter-spacing: 0.3px;
+    line-height: 140%;
+    // background: #fff;
+    font-size: 1rem;
+    overflow-x: hidden;
+    opacity: 0;
+    height: 10000px;
+    background: #f0f2f5;
+
+    &.DOMContentLoaded {
+        opacity: 1;
+    }
+
+}
+
+
+//rem responsivo
+html {
+    --font-base: 100%;
+    --menu-size: 0;
+    font-size: var(--font-base);
+    scroll-behavior: smooth;
+
+
+}
+
+@media (max-width: 1440px) {
+    html {
+        font-size: calc(var(--font-base) - 12.25%);
+    }
+}
+
+@media (max-width: 980px) {
+    html {
+        font-size: calc(var(--font-base) - 14.5%);
+    }
+}
+
+@media (max-width: 340px) {
+    html {
+        font-size: calc(var(--font-base) - 30.00%);
+
+    }
+}
