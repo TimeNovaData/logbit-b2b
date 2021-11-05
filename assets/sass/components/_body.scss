@@ -1,5 +1,5 @@
 body {
-    @include scrollbars(8px, $cor-verde-2, #f0f2f5);
+    @include scrollbars(8px, $cor-verde-2, $white-bg);
     // font-feature-settings: 'pnum'on, 'lnum'on;
     transition: opacity .4s ease;
     // letter-spacing: 0.3px;
@@ -9,7 +9,7 @@ body {
     overflow-x: hidden;
     opacity: 0;
     height: 10000px;
-    background: #f0f2f5;
+    background: $white-bg;
     margin-top: var(--menu--size);
     font-family: $font-mont;
 

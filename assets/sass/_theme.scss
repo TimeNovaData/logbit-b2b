@@ -27,6 +27,7 @@
     font-size: 1.5rem;
     line-height: 140%;
     color: $cor-preto-2;
+    letter-spacing: 0.3px;
 
     &.white {
         color: white !important;
@@ -37,7 +38,7 @@
     background: $cor-verde-1;
     border-radius: 82px;
     padding: 1rem 1.75rem;
-    color: white;
+    color: $white;
     font-weight: 700;
     font-family: $font-red;
     transition: .3s ease;

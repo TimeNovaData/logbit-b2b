@@ -5,6 +5,7 @@
 @import "./utilities/clamp";
 @import "./utilities/utilitarios";
 @import "./theme";
+@import "./components/calendar";
 
 @mixin itemCard {
     background: transparent;
@@ -20,10 +21,10 @@
     display: flex;
     transition: .3s ease;
     position: relative;
-    border: 1px solid #CED0D4;
+    border: 1px solid $cor-borda-2;
 
     &.active {
-        background: #FFFFFF;
+        background: $white;
     }
 
     @include d(m) {
@@ -42,7 +43,7 @@
 
         .img--container {
             img {
-                transform: scale(1.2)
+                transform: scale(1.1)
             }
         }
     }
