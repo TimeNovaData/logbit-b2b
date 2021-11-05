@@ -2,10 +2,7 @@
 @import "../variaveis";
 @import "../mixins"; //MIXINS
 
-body {
-	margin-top: 85px;
 
-}
 
 * {
 	-webkit-tap-highlight-color: transparent;
@@ -24,7 +21,6 @@ body {
 	transition-property: padding, background, opacity;
 	z-index: 120;
 	font-family: $font-red !important;
-
 
 	@include d(m) {
 		padding: 20px 0;
@@ -92,7 +88,7 @@ body {
 		will-change: transform;
 
 		@include d(m) {
-			max-width: 10rem;
+			max-width: 6rem;
 
 		}
 	}

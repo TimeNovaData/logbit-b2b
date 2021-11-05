@@ -1,9 +1,10 @@
-export const swiperHome = {
+const swiperHome = {
 	slidesPerView: 1,
 	centeredSlides: true,
 	speed: 600,
 	spaceBetween: 0,
 	clickable: true,
+	loop: true,
 	autoplay: {
 		delay: 3000,
 		disableOnInteraction: true,
@@ -12,7 +13,7 @@ export const swiperHome = {
 		el: ".swiper-pagination",
 	},
 	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
+		nextEl: document.querySelector('.one-next'),
+		prevEl: document.querySelector('.one-prev'),
 	},
 }

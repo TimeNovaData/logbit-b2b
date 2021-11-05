@@ -34,11 +34,11 @@ export default function menu() {
 		}
 	}
 
-	/* 	const pegaTamanho = (el) => document.querySelector(el).getBoundingClientRect().height */
-	/* 	const setaVariavel = () => document.documentElement.style.setProperty("--menu--size",
-			`${pegaTamanho(".menu")}px`)
-		setaVariavel()
+	const pegaTamanho = (el) => document.querySelector(el).getBoundingClientRect().height
+	const setaVariavel = () => document.documentElement.style.setProperty("--menu--size",
+		`${pegaTamanho(".menu")}px`)
+	setaVariavel()
 
-		window.addEventListener('resize', setaVariavel) */
+	window.addEventListener('resize', setaVariavel)
 
 }
