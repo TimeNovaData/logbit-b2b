@@ -262,11 +262,14 @@
 				}
 			}
 
-			span {
-				text-transform: uppercase;
 
-			}
 		}
+
+	}
+
+	.two--item--text>span {
+		text-transform: uppercase;
+
 	}
 
 	.content--wrapper {
