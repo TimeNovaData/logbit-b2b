@@ -12,6 +12,7 @@ const mobile = window.matchMedia("(max-width: 1020px)").matches;
 //PAGES
 const pageHome = document.querySelector(".page--home")
 const pageNoticias = document.querySelector(".page--noticias")
+const pagePost = document.querySelector(".page--post")
 
 
 
@@ -28,12 +29,14 @@ if (pageHome) {
 	new Swiper('.five--swiper', swiperTalks)
 	mobile ? new Swiper('.six--swiper', swiperTalks) : ""
 
-
 } else if (pageNoticias) {
 	body.classList.add("body--noticias")
 
+} else if (pagePost) {
+	body.classList.add("body--post")
 
 }
+
 
 
 
