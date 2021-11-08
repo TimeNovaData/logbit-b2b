@@ -300,9 +300,9 @@
 
 .three {
 
-	margin-top: 120px;
-	padding: 80px 0;
-	padding-bottom: 120px;
+	margin-top: 7.5rem;
+	padding: 5rem 0;
+	padding-bottom: 7.5rem;
 	position: relative;
 	background-color: $cor-verde-2;
 
@@ -333,9 +333,18 @@
 		gap: 20px;
 		flex-wrap: wrap;
 
+		@include d(m) {
+			justify-content: center;
+		}
+
 	}
 
 	&--item {
+		@include d(m) {
+			width: 150px;
+			flex-shrink: 0;
+		}
+
 		.img--container {
 			display: grid;
 			place-items: center;
@@ -344,6 +353,7 @@
 			background: $white;
 			border-radius: 50%;
 			margin: 0 auto;
+
 
 			img {
 				width: 40px;
@@ -384,6 +394,10 @@
 
 .four {
 	padding-top: 7.5rem;
+
+	@include d(s) {
+		padding-top: 5rem;
+	}
 
 	&--title {
 		max-width: 60rem;
@@ -646,7 +660,12 @@
 
 	h2 {
 		text-align: center;
-		margin-bottom: 80px;
+		margin-bottom: 5rem;
+
+		@include d(s) {
+			margin-bottom: 4rem;
+
+		}
 	}
 
 	&--wrapper {
@@ -654,6 +673,13 @@
 		grid-template-columns: repeat(auto-fill, minmax(250px, 250px));
 		gap: 32px;
 		justify-content: center;
+
+		@include d(m) {
+			display: flex;
+			gap: initial;
+			justify-content: initial;
+
+		}
 	}
 
 	&--item {
@@ -661,6 +687,12 @@
 		border-radius: 10px;
 		overflow: hidden;
 		box-shadow: rgba(60, 64, 67, 0.05) 0px 1px 2px 0px, rgba(60, 64, 67, 0.04) 0px 1px 3px 1px;
+
+		@include d(m) {
+			width: 270px;
+			max-width: 270px;
+			min-width: 270px;
+		}
 
 		.img--container {
 			height: 220px;

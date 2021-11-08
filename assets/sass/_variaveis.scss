@@ -1,21 +1,61 @@
-$font-red: 'Red Hat Display', sans-serif;
-$font-mont: 'Montserrat', sans-serif;
+$font-red: 'Red Hat Display',
+sans-serif;
+$font-mont: 'Montserrat',
+sans-serif;
 
-$cor-verde-1: #28A745;
-$cor-verde-2: #AAC85A;
-$cor-verde-3: #abc85a46;
+body {
 
-$cor-red-1: #ce3232;
-$cor-red-2: rgba(206,50,50,0.11);
+	--cor-verde-1: #28A745;
+	--cor-verde-2: #AAC85A;
+	--cor-verde-3: #abc85a46;
 
-$cor-borda-1: #333333d0;
-$cor-borda-2: #CED0D4;
-$cor-borda-3: #efeff1;
+	--cor-red-1: #ce3232;
+	--cor-red-2: rgba(206, 50, 50, 0.11);
 
-$cor-preto-1: #000000da;
-$cor-preto-2: #2D2D2D;
+	--cor-borda-1: #333333d0;
+	--cor-borda-2: #CED0D4;
+	--cor-borda-3: #F0F2F5;
+	--cor-borda-3-hover: var(--white);
 
-$white: #ffffff;
-$white-bg: #f0f2f5;
+	--cor-preto-1: #000000da;
+	--cor-preto-2: #2D2D2D;
 
-$border-r: 10px;
+	--cor-cinza-1: #FBFBFD;
+
+	--white: #ffffff;
+	--white-bg: #f0f2f5;
+
+	--border-r: 10px;
+
+	--shadow1: 0px 4px 10px rgba(37, 47, 63, 0.1);
+}
+
+
+
+
+$cor-verde-1: #{var(--cor-verde-1)};
+$cor-verde-2: #{var(--cor-verde-2)};
+$cor-verde-3: #{var(--cor-verde-3)};
+
+$cor-red-1: #{var(--cor-red-1)};
+$cor-red-2: #{var(--cor-red-2)};
+
+$cor-borda-1: #{var(--cor-borda-1)};
+$cor-borda-2: #{var(--cor-borda-2)};
+$cor-borda-3: #{var(--cor-borda-3)};
+$cor-borda-3-hover: #{var(--cor-borda-3-hover)};
+
+$cor-preto-1: #{var(--cor-preto-1)};
+$cor-preto-2: #{var(--cor-preto-2)};
+
+$cor-cinza-1: #{var(--cor-cinza-1)};
+
+
+$white: #{var(--white)};
+$white-bg: #{var(--white-bg)};
+
+$border-r: #{var(--border-r)};
+
+$shadow1: #{var(--shadow1)};
+
+body.dark--mode {}

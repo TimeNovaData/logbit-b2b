@@ -18,6 +18,10 @@
     &.white {
         color: white !important;
     }
+
+    @include d(s) {
+        font-size: 2rem;
+    }
 }
 
 .theme--h3 {
@@ -44,6 +48,7 @@
     transition: .3s ease;
     font-size: 1.25rem;
     text-align: center;
+    cursor: pointer;
 
     &:active {}
 }

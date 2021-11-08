@@ -1,0 +1,48 @@
+.loader {
+	opacity: 0;
+	display: flex;
+	transition: opacity 0.3s ease-in;
+	margin: 20px auto;
+	justify-content: center;
+}
+
+.loader.show {
+	opacity: 1;
+}
+
+.circle {
+	background-color: $cor-verde-1;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	margin: 5px;
+	animation: bounce 0.5s ease-in infinite;
+}
+
+.circle:nth-of-type(2) {
+	animation-delay: 0.1s;
+}
+
+
+.two--loader {
+
+	p {
+		text-align: center;
+		opacity: 0.7;
+		font-family: $font-red;
+		letter-spacing: .3px;
+		font-weight: 500;
+	}
+}
+
+@keyframes bounce {
+
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(-10px);
+	}
+}

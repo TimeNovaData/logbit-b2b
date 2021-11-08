@@ -12,9 +12,20 @@
 @import '../sass/components/body'; //BODY
 @import '../sass/components/menu'; //
 @import '../sass/components/GERAIS'; //
+@import '../sass/components/footer'; //
+@import '../sass/components/loader'; //
 
-.page--home {
+.body--home {
     @import '../sass/pages/home';
+    background: $white-bg;
+    @include scrollbars(8px, $cor-verde-2, $white);
+
+}
+
+.body--noticias {
+    @import '../sass/pages/noticias';
+    @include scrollbars(8px, $cor-verde-2, $white-bg);
+
 }
 
 @media (min-width: 1200px) {

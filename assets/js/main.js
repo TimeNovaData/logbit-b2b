@@ -1,6 +1,6 @@
 import initDropdownMenu from "./modules/dropdownMenu.js"
 import menuPreenchido from "./modules/menuPreenchido.js"
-import puxaMenu from "./modules/puxaMenu.js"
+import puxaArquivoEappend from "./modules/puxaArquivoEappend.js"
 import menu from "./modules/menu.js"
 import mudaAtivoNoHover from "./modules/mudaAtivoHover.js";
 import calendar from "./modules/calendar.js";
@@ -11,30 +11,42 @@ const mobile = window.matchMedia("(max-width: 1020px)").matches;
 
 //PAGES
 const pageHome = document.querySelector(".page--home")
+const pageNoticias = document.querySelector(".page--noticias")
+
+
+
 
 
 //VERIFICATION
 if (pageHome) {
-	(async function init() {
-		await puxaMenu()
-		menu()
-		initDropdownMenu();
-		menuPreenchido();
-
-	})()
+	body.classList.add("body--home")
 
 	mudaAtivoNoHover('.two--item')
 	calendar()
 
 	new Swiper('.one .swiper', swiperHome)
 	new Swiper('.five--swiper', swiperTalks)
+	mobile ? new Swiper('.six--swiper', swiperTalks) : ""
+
+
+} else if (pageNoticias) {
+	body.classList.add("body--noticias")
+
+
 }
 
 
 
 
+//chama MENU e FOOTER
+(async function init() {
+	await puxaArquivoEappend('.menu--container', "./menu.html")
+	await puxaArquivoEappend('.footer--container', "./footer.html")
+	menu()
+	initDropdownMenu();
+	menuPreenchido();
 
-
+})()
 
 // FUNÇÕES INIT
 

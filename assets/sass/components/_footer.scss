@@ -1,0 +1,75 @@
+.footer {
+	background: $white;
+	padding: 5rem 0;
+
+	&--grid {
+		display: grid;
+		// grid-template-columns: repeat(4, 1fr) 1.5fr;
+		grid-template-columns: repeat(4, 1fr) 1.5fr;
+		gap: 2rem;
+
+		@include d(m) {
+			grid-template-columns: 100%;
+			text-align: center;
+		}
+	}
+
+	&--logo {
+		max-width: 300px;
+
+		@include d(m) {
+			max-width: 150px;
+			@include center
+		}
+	}
+
+	.fale {
+		grid-column: 4/5;
+
+		@include d(m) {
+			grid-column: initial;
+		}
+	}
+
+	h3 {
+		font-size: 1rem;
+		color: $cor-verde-2;
+		font-weight: 600;
+		margin-bottom: 1rem;
+	}
+
+	a {
+		font-size: 0.875rem;
+		color: $cor-preto-1;
+		opacity: .7;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	p {
+		font-size: 0.875rem;
+		color: $cor-preto-1;
+		opacity: .7
+	}
+
+	.news {
+		input {
+			border: 1px solid $cor-verde-2;
+			border-radius: $border-r;
+			height: 35px;
+			width: 90%;
+			padding: 5px 12px;
+			margin: 8px 0;
+			background: transparent;
+		}
+
+		button {
+			font-size: 0.875rem;
+			padding: 0.875rem 2rem;
+			margin-top: 10px;
+
+		}
+	}
+}
