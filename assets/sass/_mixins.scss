@@ -190,6 +190,8 @@
 
             img {
                 @include img_cover_absolute;
+                border-radius: 50%;
+                overflow: hidden;
 
             }
         }
@@ -243,5 +245,70 @@
 
         }
 
+    }
+}
+
+
+@mixin popular {
+    min-height: 400px;
+    padding-bottom: 2rem;
+    position: sticky;
+    top: 80px;
+
+    &--item {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        gap: 1rem;
+        margin-bottom: 1rem;
+
+        &:hover {
+            h3 p {
+                background-size: 100% 2px !important;
+            }
+
+            .img--container img {
+                transform: scale(1.1)
+            }
+
+        }
+
+        .img--container {
+            @include img--container(100px, 100px);
+            border-radius: $border-r;
+            overflow: hidden;
+
+
+            img {
+                @include img_cover_absolute;
+                transition: .3s ease;
+            }
+        }
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+
+            h3 {
+                font-size: 0.875rem;
+                padding: 0;
+                margin: 0;
+                margin-bottom: 0.875rem;
+                line-height: 140%;
+
+                p {
+                    @include hoverLine;
+                    padding-bottom: 1px;
+                }
+
+            }
+
+            span {
+                opacity: 0.6;
+                font-size: 12px;
+                display: inline-block;
+                margin-top: auto;
+            }
+        }
     }
 }

@@ -34,6 +34,7 @@ if (pageHome) {
 
 } else if (pagePost) {
 	body.classList.add("body--post")
+	new Swiper('.two--swiper', swiperTalks)
 
 }
 

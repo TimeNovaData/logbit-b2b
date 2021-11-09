@@ -187,12 +187,21 @@
 			display: grid;
 			gap: 1.875rem;
 		}
+
+		@include d(m) {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	&--item {
 		display: grid;
 		grid-template-columns: max-content 1fr;
 		gap: 1rem;
+
+		@include d(m) {
+			grid-template-columns: 1fr;
+			gap: 0rem;
+		}
 
 		&:hover {
 			.two--item--text {
@@ -219,6 +228,11 @@
 			overflow: hidden;
 			border-radius: $border-r;
 
+			@include d(m) {
+				width: 100%;
+				border-radius: $border-r $border-r 0 0 !important;
+			}
+
 			img {
 				border: 1px solid $cor-borda-3;
 
@@ -226,6 +240,12 @@
 				transition: .4s ease-out;
 				@include img_cover_absolute;
 				filter: grayscale(10%) brightness(0.9);
+
+				@include d(m) {
+					border-radius: $border-r $border-r 0 0 !important;
+					border-bottom: initial;
+
+				}
 			}
 
 		}
@@ -248,6 +268,10 @@
 			display: flex;
 			flex-direction: column;
 			transition: .3s ease;
+			@include d(m){
+				border-radius: 0 0  $border-r $border-r !important;
+
+			}
 
 			h3 {
 				margin: 0;
@@ -282,6 +306,10 @@
 		gap: 32px;
 		grid-auto-rows: max-content;
 
+		@include d(m) {
+			display: none;
+		}
+
 		.nav--item {
 			background: $cor-cinza-1;
 
@@ -302,78 +330,22 @@
 		}
 
 
-	}
 
-	.tags {
-		@include tags;
-	}
 
-	.search {
-		@include search--nav;
-		padding-bottom: 2rem
-	}
+		.tags {
+			@include tags;
+		}
 
-	.popular {
-		@include search--nav;
-		min-height: 400px;
-		padding-bottom: 2rem;
-		position: sticky;
-		top: 80px;
+		.search {
+			@include search--nav;
+			padding-bottom: 2rem
+		}
 
-		&--item {
-			display: grid;
-			grid-template-columns: 100px 1fr;
-			gap: 1rem;
-			margin-bottom: 1rem;
 
-			&:hover {
-				h3 p {
-					background-size: 100% 2px !important;
-				}
 
-				.img--container img {
-					transform: scale(1.1)
-				}
-
-			}
-
-			.img--container {
-				@include img--container(100px, 100px);
-				border-radius: $border-r;
-				overflow: hidden;
-
-				img {
-					@include img_cover_absolute;
-					transition: .3s ease;
-					;
-				}
-			}
-
-			.text {
-				display: flex;
-				flex-direction: column;
-				height: 100%;
-
-				h3 {
-					font-size: 0.875rem;
-					padding: 0;
-					margin: 0;
-					margin-bottom: 0.875rem;
-					line-height: 140%;
-
-					p {
-						@include hoverLine;
-					}
-
-				}
-
-				span {
-					opacity: 0.6;
-					font-size: 12px;
-					display: inline-block;
-					margin-top: auto;
-				}
-			}
+		.popular {
+			@include search--nav;
+			@include popular;
 		}
 	}
 }

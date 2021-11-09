@@ -31,13 +31,14 @@
 	&--wrapper {
 		display: flex;
 		align-items: center;
+		justify-content: space-evenly;
 	}
 
 	&--list {
 		display: flex;
 		align-items: center;
-		margin-left: auto;
-		margin-right: auto;
+/* 		margin-left: auto;
+		margin-right: auto; */
 
 		@include d(m) {
 			display: none;
@@ -96,7 +97,7 @@
 	}
 
 	.container {
-		max-width: 1600px !important;
+		max-width: 1440px !important;
 	}
 }
 
