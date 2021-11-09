@@ -49,10 +49,10 @@ if (pageHome) {
 	menu()
 	initDropdownMenu();
 	menuPreenchido();
-
+	new Swiper('.mega--menu--swiper', swiperTalks)
 })()
 
-// FUNÇÕES INIT
+
 
 
 

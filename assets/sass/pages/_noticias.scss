@@ -33,6 +33,17 @@
 	}
 }
 
+///=========================
+///=========================
+///=========================
+///=========================
+///=========================
+//ONE
+///=========================
+///=========================
+///=========================
+///=========================
+
 .one {
 	.container {
 		h2 {
@@ -136,6 +147,10 @@
 			h3 {
 				font-size: 1rem;
 				margin-top: 0.5rem;
+				overflow: hidden;
+				display: -webkit-box;
+				-webkit-line-clamp: 4;
+				-webkit-box-orient: vertical;
 
 				@include d(s) {
 					font-size: 0.875rem
@@ -268,15 +283,19 @@
 			display: flex;
 			flex-direction: column;
 			transition: .3s ease;
-			@include d(m){
-				border-radius: 0 0  $border-r $border-r !important;
+
+			@include d(m) {
+				border-radius: 0 0 $border-r $border-r !important;
 
 			}
 
 			h3 {
 				margin: 0;
-				padding: 1rem 0 2rem;
-
+				margin: 1rem 0 2rem;
+				overflow: hidden;
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
 
 
 				p {

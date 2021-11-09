@@ -67,6 +67,10 @@
 			font-family: $font-red;
 			font-weight: 700;
 			font-size: 3rem;
+			overflow: hidden;
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
 
 			@include d(m) {
 				font-size: 1.75rem;
@@ -268,7 +272,7 @@
 
 	&--wrapper {
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
 	}
 
 	@media (min-width: 1200px) {
@@ -321,6 +325,10 @@
 			font-weight: 700;
 			letter-spacing: 0.3px;
 			margin-top: .875rem;
+			overflow: hidden;
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
 
 			p {
 				@include hoverLine;

@@ -64,8 +64,24 @@
 		}
 
 		h1 {
+			overflow: hidden;
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+
+
+			@include d(m) {
+
+				height: 100%;
+				margin-bottom: .65rem;
+			}
+
 			p {
 				@include hoverLine;
+
+				@include d(s) {
+					padding-bottom: 0;
+				}
 			}
 		}
 
@@ -150,7 +166,7 @@
 		right: 0;
 
 		.buttons--wrapper {
-			max-width: 170px;
+			max-width: 150px;
 			position: absolute;
 			width: 100%;
 			height: 60px;
@@ -523,6 +539,7 @@
 	margin-top: 80px;
 	background: $cor-verde-2;
 	position: relative;
+	overflow: hidden;
 
 	h2 {
 		text-align: center;
@@ -541,11 +558,16 @@
 		max-width: 20rem;
 		min-height: 21rem;
 		height: 100%;
+		padding-bottom: 2rem;
 
 		header {
 			padding: 1rem 0;
 			border-bottom: 1px solid $cor-borda-3;
 			margin-bottom: 1.25rem;
+
+			@include d(m) {
+				padding-top: 0;
+			}
 
 			a {
 				color: $cor-verde-1;
@@ -554,11 +576,15 @@
 		}
 
 		>p {
-			padding-bottom: 1rem;
+
 			line-height: 150%;
 			opacity: 0.8;
 			color: $cor-preto-2;
 			font-size: 1rem;
+			overflow: hidden;
+			display: -webkit-box;
+			-webkit-line-clamp: 7;
+			-webkit-box-orient: vertical;
 		}
 	}
 
@@ -673,7 +699,7 @@
 		grid-template-columns: repeat(auto-fill, minmax(250px, 250px));
 		gap: 32px;
 		justify-content: center;
-
+padding-bottom: 10px;
 		@include d(m) {
 			display: flex;
 			gap: initial;
