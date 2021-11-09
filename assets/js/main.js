@@ -25,7 +25,7 @@ if (pageHome) {
 	mudaAtivoNoHover('.two--item')
 	calendar()
 
-	// new Swiper('.one .swiper', swiperHome)
+	new Swiper('.one .swiper', swiperHome)
 	new Swiper('.five--swiper', swiperTalks)
 	mobile ? new Swiper('.six--swiper', swiperTalks) : ""
 

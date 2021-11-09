@@ -499,17 +499,6 @@
 		display: grid;
 		width: 200px;
 
-		&:hover {
-			.img--container {
-				img {
-					transform: scale(1.1);
-				}
-			}
-
-			h3 p {
-				background-size: 100% 2px !important;
-			}
-		}
 
 		.img--container {
 			@include img--container(200px, 120px);
@@ -545,7 +534,21 @@
 					color: $cor-preto-1 !important;
 					font-size: 0.875rem;
 					height: 100%;
+					background-size: 0 1px !important;
 				}
+			}
+		}
+
+
+		&:hover {
+			.img--container {
+				img {
+					transform: scale(1.1);
+				}
+			}
+
+			h3 p {
+				background-size: 100% 1px !important;
 			}
 		}
 	}

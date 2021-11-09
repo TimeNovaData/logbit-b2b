@@ -130,6 +130,7 @@
 			padding-left: 62px !important;
 			position: relative;
 			right: -90px;
+			@include hoverFlip;
 
 			@include d(s) {
 				right: 0;
@@ -296,7 +297,7 @@
 
 	&--item {
 		@include itemCard;
-		
+
 	}
 
 
