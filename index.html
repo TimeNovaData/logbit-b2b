@@ -17,6 +17,11 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
 		rel="stylesheet">
 
+	<!-- GSAP -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"
+		integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
 	<!-- SWIPER -->
 	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
@@ -47,7 +52,10 @@
 									RESULTADOS
 								</span>
 								<h1 class="theme--h1">
-									<p>AQ!Lorem ipsum dolor sit amet, consectetur adipiscing elit. !Lorem ipsum dolor sit amet, consectetur adipiscing elit.!Lorem ipsum dolor sit amet, consectetur adipiscing elit.!Lorem ipsum dolor sit amet, consectetur adipiscing elit.!Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+									<p>AQ!Lorem ipsum dolor sit amet, consectetur adipiscing elit. !Lorem ipsum dolor
+										sit amet, consectetur adipiscing elit.!Lorem ipsum dolor sit amet, consectetur
+										adipiscing elit.!Lorem ipsum dolor sit amet, consectetur adipiscing elit.!Lorem
+										ipsum dolor sit amet, consectetur adipiscing elit.</p>
 								</h1>
 								<footer>
 									<div class="people">
@@ -57,14 +65,23 @@
 											<span>22/09/2023</span>
 										</div>
 									</div>
-									<a href="#" class="theme--btn">Ler Mais</a>
+									<div class="magnetic--container">
+										<a href="#" class="theme--btn magnetic">
+											<span class="flip">
+												<span data-text="Ler Mais">
+													Ler Mais
+												</span>
+											</span>
+										</a>
+
+									</div>
 								</footer>
 							</div>
 
 						</div>
 					</div>
 
-					<div class="swiper-slide one--item">
+					<!-- <div class="swiper-slide one--item">
 
 						<div class="container">
 							<img class="one--bg" src="./assets/img/cover2.jpeg" alt="people">
@@ -118,7 +135,7 @@
 							</div>
 
 						</div>
-					</div>
+					</div> -->
 				</div>
 				<div class="swiper--buttons">
 					<div class="buttons--wrapper">
@@ -622,6 +639,9 @@
 
 
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+		integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 	<script src="./assets/js/dist/hello.week.min.js"></script>
 	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

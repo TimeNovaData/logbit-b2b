@@ -288,7 +288,7 @@
 		@include d(m) {
 			grid-template-columns: 1fr;
 			margin-top: 2rem;
-
+			justify-items: center;
 		}
 
 
@@ -296,6 +296,7 @@
 
 	&--item {
 		@include itemCard;
+		
 	}
 
 
@@ -699,7 +700,8 @@
 		grid-template-columns: repeat(auto-fill, minmax(250px, 250px));
 		gap: 32px;
 		justify-content: center;
-padding-bottom: 10px;
+		padding-bottom: 10px;
+
 		@include d(m) {
 			display: flex;
 			gap: initial;
