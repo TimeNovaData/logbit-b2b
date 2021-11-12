@@ -2,9 +2,9 @@
 
 @import "./variaveis";
 @import "./utilities/responsivo";
-@import "./utilities/clamp";
 @import "./utilities/utilitarios";
 @import "./theme";
+@import "./utilities/clamp";
 @import "./components/calendar";
 
 @mixin itemCard {
@@ -22,7 +22,8 @@
     transition: .3s ease;
     position: relative;
     border: 1px solid $cor-borda-2;
-    @include d(m){
+
+    @include d(m) {
         max-width: 400px;
     }
 
@@ -137,6 +138,31 @@
     }
 
 
+}
+
+
+@mixin aFlipHover {
+    a {
+        font-size: 1rem;
+        line-height: 45px;
+
+        &.btn--claro {
+            span {
+                color: transparent !important;
+            }
+
+            span:before,
+            span:after {
+                color: $cor-verde-1 !important;
+            }
+
+
+        }
+
+        &:hover {
+            @include hoverFlip;
+        }
+    }
 }
 
 @mixin hoverLine {
@@ -323,3 +349,33 @@
         }
     }
 }
+
+@mixin intro {
+    padding: 3.75rem 0;
+    text-align: center;
+    margin-bottom: 6.25rem;
+    @include bg-props-cover;
+    background-image: url("../img/bg-fundo-2.png");
+
+    @include d(s) {
+        margin-bottom: 5rem;
+    }
+
+    span,
+    h1 {
+        text-transform: uppercase;
+    }
+
+    span {
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        margin-top: 0.5rem;
+        font-size: 2.5rem;
+
+    }
+}
+
+
+$icon-search:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTExLjE0OTkgMTEuMDYwMUwxNi45OTk5IDE2Ljk5MDFNMTEuMTkzMSAyLjU4MTg3QzEzLjUyNSA0LjkxMzY5IDEzLjUyNSA4LjY5NDMyIDExLjE5MzEgMTEuMDI2MUM4Ljg2MTMyIDEzLjM1OCA1LjA4MDY5IDEzLjM1OCAyLjc0ODg3IDExLjAyNjFDMC40MTcwNDUgOC42OTQzMiAwLjQxNzA0NSA0LjkxMzY5IDIuNzQ4ODcgMi41ODE4N0M1LjA4MDY5IDAuMjUwMDUzIDguODYxMzIgMC4yNTAwNTMgMTEuMTkzMSAyLjU4MTg3WiIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLW9wYWNpdHk9IjAuNiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K);

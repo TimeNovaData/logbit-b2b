@@ -345,71 +345,7 @@
 
 
 	<script>
-		document.addEventListener("DOMContentLoaded", () => {
-			setTimeout(() => {
-
-				const noticiasClones = document.querySelectorAll('.content--wrapper .two--item')
-				const postsContainer = document.querySelector('.content--wrapper')
-				const loaderContainer = document.querySelector('.loader')
-				const footer = document.querySelector('.footer')
-				const footerHeight = footer.getBoundingClientRect().height
-				let ativo = false
-				const timeDelay = 700
-
-				console.log(postsContainer, noticiasClones)
-
-
-				const removeLoader = () => {
-					setTimeout(() => {
-						loaderContainer.classList.remove('show')
-						ativo = false
-					}, timeDelay)
-				}
-
-				const showLoader = () => {
-					ativo = true
-					if (postsContainer.children.length < 16) {
-						loaderContainer.classList.add('show')
-						setTimeout(() => {
-							addPostsIntoDom()
-						}, timeDelay)
-						removeLoader()
-					} else {
-						loaderContainer.parentElement.innerHTML =
-							`<p>Não há mais notícias para serem exibidas...</p>`
-					}
-
-				}
-
-
-				const addPostsIntoDom = () => {
-					postsContainer.innerHTML += Array.from(noticiasClones)
-						.map(clone => clone.outerHTML)
-						.join('')
-
-				}
-
-				const handleScrollToPageBottom = () => {
-					const {
-						clientHeight,
-						scrollHeight,
-						scrollTop
-					} = document.documentElement
-
-					const ispageBottom = scrollTop + clientHeight >= scrollHeight - 10 - footerHeight
-
-					if (ispageBottom && !ativo) {
-						showLoader()
-						console.log("entrou IspageBottom");
-
-					}
-
-
-				}
-
-				window.addEventListener('scroll', handleScrollToPageBottom)
-			}, 1000);
-		})
+		
 	</script>
 
 </body>

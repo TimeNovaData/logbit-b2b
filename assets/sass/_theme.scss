@@ -50,12 +50,19 @@
     cursor: pointer;
     overflow: hidden;
     height: 47px;
+    letter-spacing: 0.2px;
+
+    &.btn--claro {
+        color: $cor-verde-1;
+        background: transparent;
+        border: 1px solid $cor-verde-1;
+    }
 
     &:active {}
 
 
 
-   
+
 }
 
 .flip {
@@ -82,6 +89,8 @@
             display: block;
             position: absolute;
             color: #ffffff;
+            will-change: transform;
+            z-index: 10;
 
         }
 
@@ -93,6 +102,7 @@
             transform: skewY(7deg);
             transform-origin: left top;
             transition: transform 2s cubic-bezier(0.19, 1, 0.22, 1);
+
         }
     }
 
@@ -101,21 +111,19 @@
 }
 
 @mixin hoverFlip {
-    &:hover {
-        .flip {
+    .flip {
 
-            span {
-                transform: translateY(-105%);
+        span {
+            transform: translateY(-105%);
 
-                &:before {
-                    transform: skewY(7deg);
-                }
+            &:before {
+                transform: skewY(7deg);
+            }
 
-                &:after {
-                    transform: skewY(0);
+            &:after {
+                transform: skewY(0);
 
-                    color: white !important;
-                }
+                color: white ;
             }
         }
     }

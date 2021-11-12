@@ -32,23 +32,9 @@
     @import '../sass/pages/post';
 }
 
-@media (min-width: 1200px) {
-
-    .container,
-    .container-sm,
-    .container-md,
-    .container-lg,
-    .container-xl {
-        max-width: 1220px;
-    }
-
-
+.body--biblioteca {
+    @import '../sass/pages/biblioteca';
 }
-
-.js-animate {
-    will-change: transform, opacity;
-}
-
-.js-animate.animou {
-    will-change: initial;
+.body--biblioteca_single {
+    @import '../sass/pages/biblioteca_single';
 }

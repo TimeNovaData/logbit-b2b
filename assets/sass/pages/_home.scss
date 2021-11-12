@@ -124,13 +124,14 @@
 
 		}
 
-
-		.theme--btn {
-			padding-right: 62px !important;
-			padding-left: 62px !important;
+		.magnetic--container {
+			// @include hoverFlip;
 			position: relative;
 			right: -90px;
-			@include hoverFlip;
+
+			&.magnet {
+				@include hoverFlip;
+			}
 
 			@include d(s) {
 				right: 0;
@@ -138,6 +139,14 @@
 				margin-top: auto;
 
 			}
+		}
+
+		.theme--btn {
+			padding-right: 62px !important;
+			padding-left: 62px !important;
+
+
+
 		}
 
 		.theme--span {
