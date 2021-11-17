@@ -59,7 +59,7 @@ else if (pageBibliotecaSingle) {
 
 
 }
-
+/*
 //chama MENU e FOOTER
 (async function init() {
 	await puxaArquivoEappend('.menu--container', "./menu.html")
@@ -69,8 +69,7 @@ else if (pageBibliotecaSingle) {
 	menuPreenchido();
 	new Swiper('.mega--menu--swiper', swiperTalks)
 })()
-
-
+*/
 
 
 // EVENTOS 🧙‍♂️

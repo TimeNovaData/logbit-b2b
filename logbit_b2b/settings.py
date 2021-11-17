@@ -184,6 +184,7 @@ INSTALLED_APPS = [
 LANGUAGES = (
     ## Customize this
     ('pt', gettext('pt')),
+    ('en', gettext('en')),
 )
 
 CMS_LANGUAGES = {
@@ -192,6 +193,13 @@ CMS_LANGUAGES = {
         {
             'code': 'pt',
             'name': gettext('pt'),
+            'redirect_on_fallback': True,
+            'public': True,
+            'hide_untranslated': False,
+        },
+        {
+            'code': 'en',
+            'name': gettext('en'),
             'redirect_on_fallback': True,
             'public': True,
             'hide_untranslated': False,
@@ -208,7 +216,8 @@ CMS_TEMPLATES = (
     ## Customize this
     ('fullwidth.html', 'Fullwidth'),
     ('sidebar_left.html', 'Sidebar Left'),
-    ('sidebar_right.html', 'Sidebar Right')
+    ('sidebar_right.html', 'Sidebar Right'),
+    ('index.html', 'Index Template'),
 )
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
