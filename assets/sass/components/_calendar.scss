@@ -1,0 +1,91 @@
+@mixin calendar {
+	border-radius: $border-r;
+	max-width: 25rem;
+	background: $white;
+	font-family: $font-red;
+
+	.navigation {
+		padding: .75rem 0;
+		border-radius: 10px 10px 0 0;
+
+		background: $cor-red-1;
+		color: $white;
+
+		.period {
+			font-family: $font-red;
+			font-weight: 600;
+		}
+
+		ion-icon {
+			font-size: 24px;
+			color: $white;
+		}
+	}
+
+	.week {
+		border-bottom: 1px solid $cor-borda-3;
+
+		.day {
+			opacity: .5 !important;
+			font-weight: 500;
+		}
+	}
+
+	.month {
+		padding: 0 .625rem .625rem;
+		min-height: 18.875rem;
+		margin-top: 5px;
+
+		@include d(s) {
+			padding: 0 .425rem .425rem;
+			min-height: initial;
+			padding-left: 0.6rem;
+
+		}
+
+		.day {
+			border-radius: 50%;
+			transition: 0.3s ease;
+			flex-shrink: 0;
+			width: 3.375rem;
+			height: 3.375rem;
+
+			@include d(s) {
+				width: 44px;
+				height: 44px;
+				@include size(14.28571%);
+				text-align: center;
+			}
+
+			&:hover {
+				background: $cor-red-2;
+			}
+		}
+	}
+
+	.navigation {
+
+		.prev,
+		.next {
+			border-radius: 50%;
+			overflow: hidden;
+			flex-shrink: 0;
+			width: 50px;
+			transition: .3s ease;
+			height: 50px;
+
+			&:hover {
+				background: rgba(255, 255, 255, 0.14);
+			}
+		}
+
+		.prev {
+			margin-left: 5px;
+		}
+
+		.next {
+			margin-right: 5px;
+		}
+
+	}
+}

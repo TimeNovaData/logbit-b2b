@@ -1,0 +1,30 @@
+.swiper-button-disabled {
+	opacity: 0.1 !important;
+
+}
+
+* {
+	-webkit-tap-highlight-color: transparent;
+}
+
+
+
+@media (min-width: 1200px) {
+	.container,
+	.container-sm,
+	.container-md,
+	.container-lg,
+	.container-xl {
+		max-width: 1220px;
+	}
+
+
+}
+
+.js-animate {
+	will-change: transform, opacity;
+}
+
+.js-animate.animou {
+	will-change: initial;
+}

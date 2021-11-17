@@ -1,0 +1,185 @@
+@import"../components/bibliotecaItem";
+@import"../components/bibliotecaListItem";
+
+.footer {
+	background: $white-bg !important;
+}
+
+
+
+///=========================
+///=========================
+///=========================
+///=========================
+///=========================
+//intro
+///=========================
+///=========================
+///=========================
+///=========================
+
+
+.intro {
+	@include intro;
+}
+
+
+///=========================
+///=========================
+///=========================
+///=========================
+///=========================
+//ONE
+///=========================
+///=========================
+///=========================
+///=========================
+
+
+
+.one {
+	&--title {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 4rem;
+		// font-family: $font-red;
+		font-weight: 700;
+
+		@include d(m) {
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+
+		p {
+			font-size: 1rem;
+			color: $cor-preto-2;
+			margin-top: 1rem;
+
+		}
+
+
+
+		.input--container {
+			position: relative;
+			height: max-content;
+			margin-left: 5.625rem;
+			align-self: flex-end;
+
+			@include d(m) {
+				margin-top: 1.5rem;
+				@include center;
+				width: 100%;
+			}
+
+			&:after {
+				@include pseudo(absolute);
+				@include size(1.3rem);
+				top: 0;
+				bottom: 0;
+				margin: auto 0;
+				left: 15px;
+				background-image: $icon-search;
+
+			}
+
+			input {
+				background: rgba(85, 85, 85, 0.08);
+				border-radius: 4px;
+				height: 3.25rem;
+				width: 26.25rem;
+				padding: 10px 1rem 10px 45px;
+				border: initial;
+				color: $cor-preto-2;
+
+				@include d(m) {
+					max-width: 26rem;
+					width: 100%;
+				}
+
+			}
+		}
+	}
+
+	.tags--wrapper {
+		@include d(m) {
+			margin-top: 1.5rem;
+		}
+	}
+
+	&--wrapper {
+		display: flex;
+
+		@include d(m) {
+			flex-direction: column;
+			@include center;
+			max-width: 330px;
+		}
+
+		&:hover {
+			.img--container img {
+				transform: scale(1.1);
+
+			}
+
+			h3 p {
+				background-size: 100% 2px !important;
+
+			}
+		}
+
+		img,
+		.img--container {
+			height: 336px;
+			max-width: 590px;
+			width: 100%;
+			object-fit: cover;
+			border-radius: $border-r;
+			transition: .4s ease-out !important;
+
+			@include d(m) {
+				height: 300px;
+			}
+
+
+
+		}
+
+		.img--container {
+			overflow: hidden;
+		}
+
+		.text {
+			@include item;
+			margin-left: 32px;
+			max-width: 400px;
+
+			@include d(m) {
+				margin-left: initial
+			}
+
+		}
+	}
+
+	.btn--wrapper {
+		@include aFlipHover;
+
+
+	}
+}
+
+
+///=========================
+///=========================
+///=========================
+///=========================
+///=========================
+//TWO
+///=========================
+///=========================
+///=========================
+///=========================
+
+.two {
+	@include bibliotecaListItem;
+}

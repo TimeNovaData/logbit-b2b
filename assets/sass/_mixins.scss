@@ -1,0 +1,381 @@
+// ===================================================
+
+@import "./variaveis";
+@import "./utilities/responsivo";
+@import "./utilities/utilitarios";
+@import "./theme";
+@import "./utilities/clamp";
+@import "./components/calendar";
+
+@mixin itemCard {
+    background: transparent;
+    border-radius: 10px;
+    max-width: 39.25rem;
+    min-height: 20.5rem;
+
+    position: absolute;
+    padding: 2.5rem 2rem;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: 22px;
+    display: flex;
+    transition: .3s ease;
+    position: relative;
+    border: 1px solid $cor-borda-2;
+
+    @include d(m) {
+        max-width: 400px;
+    }
+
+    &.active {
+        background: $white;
+    }
+
+    @include d(m) {
+        flex-direction: column;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    &:hover {
+
+        h3 {
+            p {
+                background-size: 100% 2px !important;
+            }
+        }
+
+        .img--container {
+            img {
+                transform: scale(1.1)
+            }
+        }
+    }
+
+    .people {
+        @include people;
+        margin-top: auto;
+
+
+        p {
+            font-size: 0.875rem;
+        }
+    }
+
+    .text {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+
+        @include d(m) {
+            padding: 1rem 2rem 0.5rem;
+        }
+
+        h3 {
+            word-break: break-word;
+            margin: 1rem 0;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+
+            p {
+                @include hoverLine;
+            }
+        }
+    }
+
+    .img--container {
+        @include size(230px);
+        flex-shrink: 0;
+        border-radius: 50%;
+        margin: auto 0;
+        overflow: hidden;
+        margin-left: 1rem;
+
+        @include d(m) {
+            order: -1;
+            border-radius: initial;
+            width: 100%;
+            height: 190px;
+            margin-left: 0;
+            border: $border-r $border-r 0 0;
+        }
+
+        img {
+            object-fit: cover;
+            transition: .4s transform ease-out;
+            @include size(100%)
+        }
+    }
+}
+
+@mixin people {
+    display: flex;
+    align-items: center;
+
+    @include d(s) {
+        margin: 1rem 0;
+    }
+
+    .text {
+        margin-left: 12px;
+        display: flex;
+        flex-direction: column;
+
+        p {
+            font-weight: 500;
+            color: $cor-preto-2;
+        }
+
+        span {
+            color: $cor-preto-2;
+            opacity: .7;
+            font-size: 0.875rem;
+        }
+
+
+    }
+
+
+}
+
+
+@mixin aFlipHover {
+    a {
+        font-size: 1rem;
+        line-height: 45px;
+
+        &.btn--claro {
+            span {
+                color: transparent !important;
+            }
+
+            span:before,
+            span:after {
+                color: $cor-verde-1 !important;
+            }
+
+
+        }
+
+        &:hover {
+            @include hoverFlip;
+        }
+    }
+}
+
+@mixin hoverLine {
+    background-size: 0px 2px;
+    background-position: 0px 95%;
+    background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
+    padding: 0.1% 0px;
+    position: relative;
+    display: inline !important;
+    background-repeat: no-repeat;
+    color: inherit;
+    transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+
+    &:hover {
+        background-size: 100% 2px !important;
+
+    }
+
+}
+
+@mixin img--container($w:100%, $h:100%, $b:true) {
+    width: $w;
+    height: $h;
+
+    @if($b==b) {
+        border-radius: $border-r;
+    }
+
+    overflow: hidden;
+    position: relative;
+
+    display: grid;
+    place-items: center;
+}
+
+@mixin tags {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+    .tag--item {
+        display: flex;
+        align-items: center;
+        background: $cor-cinza-1;
+        border-radius: $border-r;
+        padding: 8px;
+
+        &:hover {
+            p {
+                color: $cor-verde-1 !important;
+            }
+        }
+
+        .img--container {
+            @include size(50px);
+            position: relative;
+
+            img {
+                @include img_cover_absolute;
+                border-radius: 50%;
+                overflow: hidden;
+
+            }
+        }
+
+        p {
+            font-family: $font-red;
+            margin: 0;
+            margin-left: 1rem;
+            font-weight: 600;
+            font-size: 1.25rem;
+            color: $cor-preto-2;
+            transition: .3s ease;
+
+        }
+    }
+
+}
+
+@mixin search--nav {
+    background: $cor-cinza-1;
+    border-radius: $border-r;
+    padding: 1rem;
+
+    .input--container {
+        position: relative;
+        height: auto;
+        width: 100%;
+        border: 1px solid $cor-borda-2;
+        border-radius: $border-r;
+        height: 34px;
+
+        input {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            padding: 5px 40px 5px 10px;
+            border: initial;
+        }
+
+        ion-icon {
+            position: absolute;
+            right: 10px;
+            top: 0px;
+            bottom: 0;
+            margin: auto 0;
+            font-size: 22px;
+            color: $cor-verde-1;
+            cursor: pointer;
+            transition: .3s ease;
+
+        }
+
+    }
+}
+
+
+@mixin popular {
+    min-height: 400px;
+    padding-bottom: 2rem;
+    position: sticky;
+    top: 80px;
+
+    &--item {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        gap: 1rem;
+        margin-bottom: 1rem;
+
+        &:hover {
+            h3 p {
+                background-size: 100% 2px !important;
+            }
+
+            .img--container img {
+                transform: scale(1.1)
+            }
+
+        }
+
+        .img--container {
+            @include img--container(100px, 100px);
+            border-radius: $border-r;
+            overflow: hidden;
+
+
+            img {
+                @include img_cover_absolute;
+                transition: .3s ease;
+            }
+        }
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+
+            h3 {
+                font-size: 0.875rem;
+                padding: 0;
+                margin: 0;
+                margin-bottom: 0.875rem;
+                line-height: 140%;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;
+
+                p {
+                    @include hoverLine;
+                    padding-bottom: 1px;
+                }
+
+            }
+
+            span {
+                opacity: 0.6;
+                font-size: 12px;
+                display: inline-block;
+                margin-top: auto;
+            }
+        }
+    }
+}
+
+@mixin intro {
+    padding: 3.75rem 0;
+    text-align: center;
+    margin-bottom: 6.25rem;
+    @include bg-props-cover;
+    background-image: url("../img/bg-fundo-2.png");
+
+    @include d(s) {
+        margin-bottom: 5rem;
+    }
+
+    span,
+    h1 {
+        text-transform: uppercase;
+    }
+
+    span {
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        margin-top: 0.5rem;
+        font-size: 2.5rem;
+
+    }
+}
+
+
+$icon-search:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTExLjE0OTkgMTEuMDYwMUwxNi45OTk5IDE2Ljk5MDFNMTEuMTkzMSAyLjU4MTg3QzEzLjUyNSA0LjkxMzY5IDEzLjUyNSA4LjY5NDMyIDExLjE5MzEgMTEuMDI2MUM4Ljg2MTMyIDEzLjM1OCA1LjA4MDY5IDEzLjM1OCAyLjc0ODg3IDExLjAyNjFDMC40MTcwNDUgOC42OTQzMiAwLjQxNzA0NSA0LjkxMzY5IDIuNzQ4ODcgMi41ODE4N0M1LjA4MDY5IDAuMjUwMDUzIDguODYxMzIgMC4yNTAwNTMgMTEuMTkzMSAyLjU4MTg3WiIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLW9wYWNpdHk9IjAuNiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K);

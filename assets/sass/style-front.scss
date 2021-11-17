@@ -1,0 +1,40 @@
+@import '../sass/bootstrap__imports';
+@import '../sass/variaveis';
+@import '../sass/mixins'; //MIXINS
+
+// UTILIDADES
+@import '../sass/utilities/utilitarios';
+@import '../sass/utilities/responsivo';
+@import '../sass/utilities/reset';
+@import '../sass/utilities/animation';
+
+//components
+@import '../sass/components/body'; //BODY
+@import '../sass/components/menu'; //
+@import '../sass/components/GERAIS'; //
+@import '../sass/components/footer'; //
+@import '../sass/components/loader'; //
+
+.body--home {
+    @import '../sass/pages/home';
+    background: $white-bg;
+    @include scrollbars(8px, $cor-verde-2, $white);
+
+}
+
+.body--noticias {
+    @import '../sass/pages/noticias';
+    @include scrollbars(8px, $cor-verde-2, $white-bg);
+
+}
+
+.body--post {
+    @import '../sass/pages/post';
+}
+
+.body--biblioteca {
+    @import '../sass/pages/biblioteca';
+}
+.body--biblioteca_single {
+    @import '../sass/pages/biblioteca_single';
+}
