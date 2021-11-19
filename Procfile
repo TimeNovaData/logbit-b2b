@@ -1,0 +1,1 @@
+web: gunicorn logbit_b2b.wsgi --log-file -
