@@ -1,0 +1,19 @@
+{% load djangocms_blog i18n easy_thumbnails_tags cms_tags %}
+
+<a href="{{ post.get_absolute_url }}" id="post-{{ post.slug }}" class="two--item swiper-slide">
+    <div class="img--container">
+        {% thumbnail post.main_image post.thumbnail_options.size crop=post.thumbnail_options.crop upscale=post.thumbnail_options.upscale subject_location=post.main_image.subject_location as thumb %}
+        <img src="{{ thumb.url }}" alt="{{ post.main_image.default_alt_text }}" width="{{ thumb.width }}" height="{{ thumb.height }}" />
+    </div>
+
+    <div class="text">
+        <span class="theme--span">{{ post.title }}</span>
+        <h3>
+            {% if not TRUNCWORDS_COUNT %}
+                {% render_model post "abstract" "" "" "safe" %}
+            {% else %}
+                {% render_model post "abstract" "" "" "truncatewords_html:TRUNCWORDS_COUNT|safe"  %}
+            {% endif %}
+        </h3>
+    </div>
+</a>

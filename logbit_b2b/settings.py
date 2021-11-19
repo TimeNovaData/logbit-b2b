@@ -178,7 +178,15 @@ INSTALLED_APPS = [
     'djangocms_style',
     'djangocms_googlemap',
     'djangocms_video',
-    'logbit_b2b'
+    'logbit_b2b',
+    'noticias',
+    'aldryn_apphooks_config',
+    'parler',
+    'taggit',
+    'taggit_autosuggest',
+    'meta',
+    'sortedm2m',
+    'djangocms_blog',
 ]
 
 LANGUAGES = (
@@ -244,3 +252,6 @@ THUMBNAIL_PROCESSORS = (
     'filer.thumbnail_processors.scale_and_crop_with_subject_location',
     'easy_thumbnails.processors.filters'
 )
+
+META_SITE_PROTOCOL = 'http'
+META_SITE_DOMAIN = 'localhost:8000'
